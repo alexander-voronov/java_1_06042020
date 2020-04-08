@@ -26,9 +26,7 @@ public class Main {
        double t = 9;
 
         if (amount(t)) {
-            System.out.println("Привозите");
         } else {
-            System.out.println("время для меня не подходит");
         }
 
     }
