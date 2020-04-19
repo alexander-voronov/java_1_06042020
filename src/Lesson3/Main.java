@@ -26,7 +26,7 @@ public class Main {
                 int z = sc.nextInt();
                 if (z == 0) {
                     break;
-                } else return;
+                } else return; //continue;
             }
         }
 
