@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         //Employee employee1 = new Employee("Иванов Иван Иванович", "manager","email@email.com", "8-495-123-45-67", 100000, 35);
         //employee1.info();
+        //Commit_2
 
 
         Employee[] empArray = new Employee[5];
