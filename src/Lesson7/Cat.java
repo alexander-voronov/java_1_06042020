@@ -3,19 +3,16 @@ package Lesson7;
 public class Cat {
     String name;
     int APPETITE;
-    int satiety;
+    boolean satiety;
 
 
-    public Cat(String name, int APPETITE) {
+    public Cat(String name, int APPETITE, boolean satiety) {
         this.name = name;
         this.APPETITE = APPETITE;
+        this.satiety = satiety;
     }
 
-
-
     public void eat(Plate plate) {
-
-        System.out.println("Cat " + name + " eat...");
         plate.decreaseFood(APPETITE);
     }
 
