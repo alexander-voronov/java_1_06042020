@@ -21,10 +21,9 @@ public class Plate {
 
     public void decreaseFood(int amount) {
         food -= amount;
-        if (food <= 0) {
-            System.out.println("Еда закончилась");
-            //food += 20;
-        }
+    }
 
+    public void increaseFood(int amount) {
+        food += amount;
     }
 }

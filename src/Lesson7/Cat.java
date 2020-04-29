@@ -15,6 +15,4 @@ public class Cat {
     public void eat(Plate plate) {
         plate.decreaseFood(APPETITE);
     }
-
-
 }

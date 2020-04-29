@@ -1,7 +1,14 @@
 package Lesson7;
 
+import java.util.Scanner;
+
 public class Main {
+
+    static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
+
+        int addFood;
 
         Plate plate = new Plate(20);
 
@@ -24,6 +31,10 @@ public class Main {
 
         }
 
+        plate.info();
+        System.out.println(" Add food ");
+        addFood = sc.nextInt();
+        plate.increaseFood(addFood);
         plate.info();
 
     }
