@@ -23,7 +23,7 @@ public class BattleMap extends JPanel {
 
     public BattleMap(GameWindow gameWindow) {
         this.gameWindow = gameWindow;
-        setBackground(Color.ORANGE);
+        setBackground(Color.pink);
 
         addMouseListener(new MouseAdapter() {
             @Override
@@ -96,8 +96,8 @@ public class BattleMap extends JPanel {
 
     private void drawX(Graphics g, int cellX, int cellY) {
         g.setColor(new Color(255, 0, 0));
-        g.drawLine(cellX * cellWidth, cellY * cellHeight,
-                (cellX + 1) * cellWidth, (cellY + 1) * cellHeight);
+        g.drawLine(cellX * cellWidth, cellY * cellHeight, (cellX + 1) * cellWidth, (cellY + 1) * cellHeight);
+        g.drawLine(cellX * cellWidth, (cellY + 1) * cellHeight, (cellX + 1) * cellWidth, cellY * cellHeight);
 
     }
 

@@ -15,17 +15,20 @@ public class Logic {
 
     static Random random = new Random();
     static boolean gameFinished = false;
+    static String TEXT;
 
     public static void go() {
         gameFinished = true;
         printMap();
         if (checkWinLines(DOT_X)) {
             System.out.println("Ты Супер победитель!");
+            TEXT = "Ты Супер победитель!";
             return;
         }
 
         if (isFull()) {
             System.out.println("Ничья...");
+            TEXT = "Ничья...";
             return;
         }
 
@@ -33,10 +36,12 @@ public class Logic {
         printMap();
         if (checkWinLines(DOT_O)) {
             System.out.println("ИИ нынче очень развито, компьютер победил!");
+            TEXT = "ИИ нынче очень развито, компьютер победил!";
             return;
         }
         if (isFull()) {
             System.out.println("Ничья...");
+            TEXT = "Ничья...";
             return;
         }
         gameFinished = false;

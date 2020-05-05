@@ -22,12 +22,16 @@ public class StartNewGameWindow extends JFrame {
 
     private GameWindow gameWindow;
 
+    private Message message;
+
     public StartNewGameWindow(GameWindow gameWindow) {
         this.gameWindow = gameWindow;
         setBounds(WIN_POS_X, WIN_POS_Y, WIN_WIDTH, WIN_HEIGHT);
         setTitle("TicTacToe");
         setResizable(false);
         setLayout(new GridLayout(8, 1));
+
+
 
         //gameMode
         add(new JLabel("Choose gameMode:"));
@@ -69,10 +73,14 @@ public class StartNewGameWindow extends JFrame {
         });
 
         setVisible(false);
+
+
+
     }
 
     private void btnStartGameClick() {
         setVisible(false);
+
         int gameMode;
         if (jrbHumVsAi.isSelected()) {
             gameMode = BattleMap.MODE_H_V_A;
@@ -87,6 +95,8 @@ public class StartNewGameWindow extends JFrame {
         Logic.initMap();
         Logic.printMap();
         Logic.gameFinished = false;
+        message = new Message(this);  //??????
+
 
         gameWindow.startNewGame(gameMode, fieldSize, fieldSize, winLength);
 
